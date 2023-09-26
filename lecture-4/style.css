@@ -1,0 +1,23 @@
+header, main, footer {
+    border: 2px blue solid;
+    box-sizing: border-box;
+}
+
+aside, article {
+    border: 2px red solid;
+    box-sizing: border-box;
+}
+
+.clearfix {
+    clear: both;
+}
+
+aside {
+    width: 15%;
+    float: left;
+}
+
+article {
+    width: 70%;
+    float: left;
+}
