@@ -1,0 +1,55 @@
+/* CSS-селектор */
+p {
+    color: blue;
+}
+li {
+    color: green;
+    font-size: 32px;
+}
+.warning {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: brown;
+}
+.warning {
+    background-color: yellow;
+    min-height: 100px;
+}
+.large-text {
+    font-size: 64px;
+}
+#highlighted {
+    font-style: italic;
+    color: hotpink;
+}
+h1 {
+    color: red;
+}
+nav li {
+    font-family: 'Lobster', sans-serif;
+}
+nav li a {
+    color: darkviolet;
+}
+main > p {
+    color: darkorange;
+}
+body {
+    /* Не очень хорошая практика */
+    color: magenta !important;
+}
+header p {
+    font-size: 2rem;
+    min-height: 50vmin;
+    min-width: 50vmax;
+}
+header li {
+    font-size: 1.5rem;
+}
+h1.warning {
+    /*
+    width: 75%;
+    height: 50%;
+    */
+    width: 50vw;
+    height: 50vh;
+}
