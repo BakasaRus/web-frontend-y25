@@ -1,0 +1,72 @@
+main.flex {
+    display: flex;
+    /* Это значение по умолчанию */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main.flex > aside {
+    flex-grow: 1;
+    width: 200px;
+}
+
+main.flex > article {
+    flex-grow: 2;
+    /* justify-self: flex-end; */
+    width: 400px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    gap: 16px;
+    grid-template-areas:
+                    "h h h"
+                    "a ar n"
+                    "f f f";
+}
+
+.grid > * {
+    border: 1px red solid;
+}
+
+/* .grid > header, .grid > footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-column: 1 / 4;
+} */
+
+.grid > header {
+    grid-area: h;
+}
+
+.grid > aside {
+    grid-area: a;
+}
+
+.grid > article {
+    grid-area: ar;
+}
+
+
+.grid > nav {
+    grid-area: n;
+}
+
+.grid > footer {
+    grid-area: f;
+}
+
+@media screen and (max-width: 1000px) {
+    .grid {
+        grid-template-areas: "h" "n" "ar" "a" "f";
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(100px, auto) repeat(3, 1fr)  minmax(100px, auto);
+    }
+
+    .grid > * {
+        border: 1px green solid;
+    }
+}
