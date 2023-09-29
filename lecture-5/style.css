@@ -1,8 +1,17 @@
+body {
+    margin: 0;
+}
+
 .grid {
+    min-height: calc(100vh - 32px);
+    margin: 16px;
     display: grid;
+    /* fr - единица измерения в долях, создаём три колонки шириной в 1 долю, 5 долей и 1 долю из 7 */
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 0.2fr 1fr 0.2fr;
     gap: 16px;
+    /* Способ задать области в сетке, по умолчанию каждый блок занимает ровно одну ячейку */
+    /* Альтернативный способ задания областей для блоков есть ниже */
     grid-template-areas:
                     "h h h"
                     "a ar n"
@@ -11,14 +20,20 @@
 
 .grid > * {
     border: 1px red solid;
+    padding: 16px;
 }
 
-/* .grid > header, .grid > footer {
+/* Пример задания области в сетке через свойства */
+/* Также есть grid-row-* */
+/* Эти свойства будут переопределены свойством grid-area ниже */
+.grid > header, .grid > footer {
     grid-column-start: 1;
     grid-column-end: 4;
+    /* Заменяет два верхних свойства */
     grid-column: 1 / 4;
-} */
+}
 
+/* Назначаем областям блоки */
 .grid > header {
     grid-area: h;
 }
@@ -31,7 +46,6 @@
     grid-area: ar;
 }
 
-
 .grid > nav {
     grid-area: n;
 }
@@ -40,6 +54,7 @@
     grid-area: f;
 }
 
+/* Пример медиазапроса */
 @media screen and (max-width: 1000px) {
     .grid {
         grid-template-areas: "h" "n" "ar" "a" "f";
