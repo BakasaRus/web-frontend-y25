@@ -58,3 +58,25 @@ body > header, body > footer {
     /* header и footer не будут забирать свободное пространство */
     flex-grow: 0;
 }
+
+/* Пример с переносом блоков */
+
+.cards {
+    display: flex;
+    /* Расстояние между блоками */
+    gap: 16px;
+    /* По умолчанию блоки не переносятся, это свойство разрешает перенос */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section.card {
+    padding: 8px;
+    border: 1px green solid;
+    /* 
+        Это позволяет блокам занимать всё свободное пространство поровну, 
+        если оно есть, и иметь ширину минимум в 200 пикселей
+    */
+    flex-grow: 1;
+    min-width: 150px;
+}
