@@ -1,0 +1,60 @@
+header, main > *, footer {
+    border: 1px red solid;
+    padding: 16px;
+    margin: 16px;
+}
+
+.flex {
+    display: flex;
+    /* Доступные значения: row, column, row-reverse, column-reverse */
+    flex-direction: row;
+    /* Выравнивание по поперечной оси */
+    align-items: center;
+}
+
+/* 
+    Если попытаться применить здесь flex-grow, то он не сработает, 
+    потому что он задаёт, сколько долей от свободного места берёт блок
+*/
+
+.flex > aside {
+    /* Выравнивание отдельного блока по поперечной оси */
+    align-self: flex-start;
+    width: 20%;
+}
+
+.flex > nav {
+    width: 20%;
+}
+
+.flex > article {
+    width: 60%;
+}
+
+/* Пример с выравниванием по главной оси */
+
+.header-nav {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Трюк с прижиманием подвала к нижнему краю, если контента на странице мало */
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+}
+
+body > main {
+    /* main будет забирать всё свободное пространство */
+    flex-grow: 1;
+}
+
+body > header, body > footer {
+    /* header и footer не будут забирать свободное пространство */
+    flex-grow: 0;
+}

@@ -3,22 +3,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-flex.css">
 </head>
 <body>
     <header>
-        <h1>Мой сайт</h1>
+        <h1>My site</h1>
+        <nav>
+            <ul class="header-nav">
+                <li>Homepage</li>
+                <li>About me</li>
+                <li>My projects</li>
+            </ul>
+        </nav>
     </header>
     <main class="flex">
-        <aside style="order: 3;">
+        <aside>
             <h2>Some banners</h2>
         </aside>
-        <article style="order: 2;">
+        <article>
             <h2>Content</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quod adipisci eligendi at tempore deleniti hic voluptates nesciunt, facilis autem dicta! Blanditiis dolorem quia optio, recusandae dolore repudiandae tenetur beatae?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum perferendis libero pariatur, tenetur maiores, facere praesentium esse recusandae omnis quibusdam quod dolores eum alias! Odio esse exercitationem quam veritatis aliquam eaque adipisci ea nemo harum! Quam at tempora quia, rerum sunt non a nemo, cupiditate ullam eos optio ratione ipsam!</p>
         </article>
-        <aside style="order: 1;">
+        <nav>
             <h2>Page navigation</h2>
-        </aside>
+        </nav>
     </main>
     <footer>
         <h2>Contacts</h2>
