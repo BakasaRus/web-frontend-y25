@@ -15,3 +15,6 @@
 * Лекция 5
   * [Вёрстка с использованием CSS Flexbox](https://bakasarus.github.io/web-frontend-y25/lecture-5/flexbox)
   * [Вёрстка с использованием CSS Grid + Медиазапросы](https://bakasarus.github.io/web-frontend-y25/lecture-5/grid)
+* Лекция 6
+  * [Пример использования БЭМ + SCSS](https://bakasarus.github.io/web-frontend-y25/lecture-6/bem)
+  * [Пример использования Atomic CSS](https://bakasarus.github.io/web-frontend-y25/lecture-6/atomic)
