@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#1">First</a></li>
+                <li><a href="#2">Second</a></li>
+                <li><a href="#3">Third</a></li>
+                <li><a href="#4">Forth</a></li>
+                <li><a href="#5">Fifth</a></li>
+            </ul>
+        </nav>
+        <button onclick="alert('Hello World!')">Alert</button>
+    </header>
+    <main>
+        <h1>Cool page</h1>
+        <section class="card">
+            <h2>About me</h2>
+            <p id="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae vel consequuntur necessitatibus nihil repellat et magnam quidem numquam nemo iste ipsum illum debitis, temporibus voluptates optio laboriosam dolorem delectus qui?</p>
+        </section>
+        <section class="card">
+            <h2>My projects</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo quam illum officiis deserunt aliquam. Amet dolore eaque culpa ullam, sequi doloremque autem omnis recusandae dolorum mollitia suscipit tempora eos quos.</p>
+        </section>
+        <section class="card">
+            <h2 name="education">Education</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis iusto ratione est sit, cupiditate eligendi. Minus, nesciunt. Molestiae quod tenetur at labore debitis! Quidem inventore dolorem doloribus, sequi laudantium atque.</p>
+        </section>
+    </main>
+    <footer>
+        <button id="add-section-btn">New section</button>
+        <button id="add-template-section-btn">New section from template</button>
+        <button id="remove-section-btn">Remove last section</button>
+    </footer>
+    <template id="section-template">
+        <section class="card">
+            <h2></h2>
+            <p></p>
+        </section>
+    </template>
+    <script src="script.js"></script>
+</body>
+</html>
