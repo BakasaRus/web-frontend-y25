@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 13</title>
+
+    <script defer src="component.js"></script>
+    <style>
+        h3 {
+            color: red;
+        }
+        p {
+            font-style: italic;
+        }
+        info-card {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Test header</h3>
+
+    <info-card card-title="Hello World!">
+        <p>This is a first card</p>
+        <p>This is a copy</p>
+        <span slot="author">Nick Andreev</span>
+    </info-card>
+
+    <info-card card-title="Hello Universe!" centered>
+        <p>This is a second card</p>
+    </info-card>
+
+    <input type="color">
+    <input type="week">
+
+    <button id="changeTitle">Change title</button>
+
+    <button is="alert-button" message="Hello Web!">Say Hello</button>
+
+    <!-- <template id="infoCardTemplate">
+        <style>h3 { color: green; }</style>
+        <h3 id="heading"></h3>
+        <p>This is my custom component</p>
+    </template> -->
+
+    <!-- <outer-element>
+        <inner-element></inner-element>
+    </outer-element> -->
+    <script>
+        document.getElementById('changeTitle').addEventListener('click', () => {
+            let card = document.querySelector('info-card');
+            card.setAttribute('card-title', 'Web is cool');
+            console.log('Button is clicked');
+        });
+    </script>
+</body>
+</html>
