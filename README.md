@@ -41,3 +41,8 @@
 * Лекция 12
   * [Песочница](https://bakasarus.github.io/web-frontend-y25/lecture-12/)
   * [Работа с Local Storage и IndexedDB](lecture-12/script.js)
+* Лекция 13
+  * [Песочница](https://bakasarus.github.io/web-frontend-y25/lecture-13/)
+  * [Основной пример компонента](lecture-13/info-card.js)
+  * [Вложенные компоненты](lecture-13/nested-example.js)
+  * [Кастомный элемент со стандартным тегом](lecture-13/alert-button.js)
