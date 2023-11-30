@@ -1,0 +1,9 @@
+h3 { 
+    color: green; 
+}
+:host {
+    padding: 24px;
+}
+:host([centered]) {
+    text-align: center;
+}

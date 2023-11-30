@@ -4,54 +4,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lecture 13</title>
 
-    <script defer src="component.js"></script>
-    <style>
-        h3 {
-            color: red;
-        }
-        p {
-            font-style: italic;
-        }
-        info-card {
-            padding: 8px;
-        }
-    </style>
+    <script defer src="info-card.js"></script>
+    <script defer src="nested-example.js"></script>
+    <script defer src="alert-button.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h3>Test header</h3>
-
     <info-card card-title="Hello World!">
+        <!-- Этот span пойдёт в слот author -->
+        <span slot="author">Nick Andreev</span>
+        <!-- Эти два абзаца пойдут в слот по умолчанию -->
         <p>This is a first card</p>
         <p>This is a copy</p>
-        <span slot="author">Nick Andreev</span>
     </info-card>
 
     <info-card card-title="Hello Universe!" centered>
         <p>This is a second card</p>
     </info-card>
 
-    <input type="color">
-    <input type="week">
+    <section>
+        <h3>Встроенные компоненты со сложной разметкой</h3>
+        <input type="color">
+        <input type="week">
+    </section>
+    <section>
+        <h3>Прикольные кнопки для тестирования компонентов</h3>
+        <button id="changeTitle">Change title</button>
+        <!-- Кастомная кнопка -->
+        <button is="alert-button" message="Hello Web!">Say Hello</button>
+    </section>
 
-    <button id="changeTitle">Change title</button>
-
-    <button is="alert-button" message="Hello Web!">Say Hello</button>
-
-    <!-- <template id="infoCardTemplate">
-        <style>h3 { color: green; }</style>
-        <h3 id="heading"></h3>
-        <p>This is my custom component</p>
-    </template> -->
+    <!-- Неактивная шаблонная разметка -->
+    <template id="infoCardTemplate">
+        <!-- В шаблонах компонентов можно подключать стили из файлов, а также встроенные стили -->
+        <link rel="stylesheet" href="info-card.css">
+        <h3></h3>
+        <!-- Можно использовать именованные слоты для вставки данных в нужное место -->
+        <p>Author: <slot name="author">Abobus</slot></p>
+        <!-- Можно использовать слот по умолчанию, чтобы складировать туда всё, что не относится к другим слотам -->
+        <slot></slot>
+    </template>
 
     <!-- <outer-element>
         <inner-element></inner-element>
     </outer-element> -->
     <script>
-        document.getElementById('changeTitle').addEventListener('click', () => {
-            let card = document.querySelector('info-card');
-            card.setAttribute('card-title', 'Web is cool');
-            console.log('Button is clicked');
-        });
     </script>
 </body>
 </html>
