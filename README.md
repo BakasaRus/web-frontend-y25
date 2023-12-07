@@ -46,3 +46,14 @@
   * [Основной пример компонента](lecture-13/info-card.js)
   * [Вложенные компоненты](lecture-13/nested-example.js)
   * [Кастомный элемент со стандартным тегом](lecture-13/alert-button.js)
+* Лекция 14
+  * [Собранная песочница](https://bakasarus.github.io/web-frontend-y25/lecture-14/dist)
+  * [Немедленно вызываемая функция (IIFE)](lecture-14/src/iife.js)
+  * [Обнаружение модуля (Revealing Module)](lecture-14/src/revealing-module.js)
+  * [AMD](lecture-14/src/amd.js)
+  * [CommonJS](lecture-14/src/common.js)
+  * [Модуль формата ES6](lecture-14/src/users.js)
+  * [Пример импорта модуля](lecture-14/src/index.js)
+  * [Конфигурация Webpack](lecture-14/webpack.config.js)
+* Лекция 15
+* Лекция 16
