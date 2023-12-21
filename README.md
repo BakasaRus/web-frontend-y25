@@ -56,4 +56,9 @@
   * [Пример импорта модуля](lecture-14/src/index.js)
   * [Конфигурация Webpack](lecture-14/webpack.config.js)
 * Лекция 15
+  * [Всё приложение](lecture-15)
+  * [Корневой компонент приложения на Vue](lecture-15/src/App.vue)
 * Лекция 16
+  * [Конфигурация TypeScript](lecture-16/tsconfig.json)
+  * [Демо с типизацией](lecture-16/src/demo.ts)
+  * [Демо со взаимодействием с HTML](lecture-16/src/main.ts)
